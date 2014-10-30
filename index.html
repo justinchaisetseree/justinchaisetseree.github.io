@@ -10,3 +10,11 @@ layout: default
 
 <p>my favorite color is {{ page.color}}. My email address is {{ site.email }}. A little about me: {{ site.description }}</p>
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
